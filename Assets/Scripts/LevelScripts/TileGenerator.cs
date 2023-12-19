@@ -40,6 +40,17 @@ public class TileGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            Debug.Log("created player");
+            player = Instantiate(player, new Vector3Int(0, 0, 0), Quaternion.identity) as GameObject;
+        }
+        else player = GameObject.FindGameObjectWithTag("Player");
+        if (GameObject.FindGameObjectWithTag("Goal") == null)
+        {
+            goal = Instantiate(goal, new Vector3Int(0, 0, 0), Quaternion.identity) as GameObject;
+        }
+        else goal = GameObject.FindGameObjectWithTag("Goal");
         numRooms = nRY * nRX;
         //new map entirely full
         map = new int[width, height];

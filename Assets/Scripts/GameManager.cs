@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
     public int levelCounter;
+    public int playerHP;
+    public int[] inventory = new int[5];//silver spine, gravelerrock,oran berry, revive seed, unused
+
     #region Sigleton
     public static GameManager Instance
     {
@@ -27,8 +30,8 @@ public class GameManager : MonoBehaviour
             _instance = this;
         DontDestroyOnLoad(this);
         levelCounter = 1;
+        playerHP = 25;
     }
     #endregion
-    public int CurrentLevel { get; set; }
     public int CurrentHealth { get; set; }
 }
