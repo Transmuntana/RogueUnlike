@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class coll : MonoBehaviour
 {
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")

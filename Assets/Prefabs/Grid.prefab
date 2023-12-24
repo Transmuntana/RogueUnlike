@@ -253,6 +253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2043312581300341032, guid: 03ccf9e4b01827c45a423ddd04d9c722, type: 3}
   goal: {fileID: 6883673645766782667, guid: 236b492165b03774681f490487af0b32, type: 3}
+  userInt: {fileID: 7049789284831506856, guid: 7009dd3569cad394f87650e0218ae15d, type: 3}
+  chest: {fileID: 0}
   towerTiles: {fileID: 1208027074261699930}
   tileStairs: {fileID: 11400000, guid: b36d53a3f2128934bac08e1d7fbf5a8b, type: 2}
   tilesFloor:
