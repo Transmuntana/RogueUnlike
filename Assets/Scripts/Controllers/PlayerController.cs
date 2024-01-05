@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
 
-        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     // Update is called once per frame

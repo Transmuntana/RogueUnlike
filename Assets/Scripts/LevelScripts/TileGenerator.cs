@@ -11,6 +11,8 @@ public class TileGenerator : MonoBehaviour
     public GameObject player;
     public GameObject goal;
     public GameObject chest;
+    public GameObject enemy;
+    public GameObject enemy2;
     public Tilemap towerTiles;
     public Tile tileStairs;
     public Tile[] tilesFloor;
@@ -238,9 +240,19 @@ public class TileGenerator : MonoBehaviour
                     {
                         int nTil = rand.Next(tilesFloor.Length);
                         towerTiles.SetTile(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z), tilesFloor[nTil]);
-                        int chestC = rand.Next(100);
+
+
+                        int chestC = rand.Next(200);
                         if (chestC == 0) {
                             GameObject tempCh = Instantiate(chest, new Vector3(0.25f, 0.25f, -1f) + towerTiles.CellToWorld(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z)), Quaternion.identity) as GameObject;
+                        }
+                        else if (chestC == 1)
+                        {
+                            GameObject tempEn = Instantiate(enemy, new Vector3(0.25f, 0.25f, -1f) + towerTiles.CellToWorld(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z)), Quaternion.identity) as GameObject;
+                        }
+                        else if (chestC == 2)
+                        {
+                            GameObject tempEn = Instantiate(enemy2, new Vector3(0.25f, 0.25f, -1f) + towerTiles.CellToWorld(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z)), Quaternion.identity) as GameObject;
                         }
                     };
                     if(x==rooms[start].rX && y==rooms[start].rY)

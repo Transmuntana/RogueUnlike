@@ -7,6 +7,7 @@ TagManager:
   - Goal
   - Inventory
   - UI
+  - Enemy
   layers:
   - Default
   - TransparentFX
