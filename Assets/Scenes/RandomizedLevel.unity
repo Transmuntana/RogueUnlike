@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCounter: 0
   playerHP: 0
+  item: 0
   playerMaxHP: 0
   inventory: 0000000000000000000000000000000000000000
   inventoryNums:
@@ -472,6 +473,10 @@ PrefabInstance:
       propertyPath: chest
       value: 
       objectReference: {fileID: 4783396941645961499, guid: 6e25fbf34d6b620488e2f5cd9bdafb53, type: 3}
+    - target: {fileID: 3148645039642286521, guid: 8cf91b1c49d63ac4aa2c3f141ce9c60a, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 416808884157957356, guid: a1aa77c25629c46419c5173d648a8182, type: 3}
     - target: {fileID: 3148645039642286521, guid: 8cf91b1c49d63ac4aa2c3f141ce9c60a, type: 3}
       propertyPath: player
       value: 

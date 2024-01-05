@@ -8,15 +8,15 @@ public class PlayerMovement : MonoBehaviour
 {
     private InputPlayer input = null;
     private Vector2 moveVector = Vector2.zero;
+    public Vector2 lastMove = new Vector2(1,0);
     private Rigidbody2D rb = null;
     private float moveSpeed = 3f;
-    private bool inventoryShow;
 
     private void Awake()
     {
         input = new InputPlayer();
-        inventoryShow = false;
         rb = GetComponent<Rigidbody2D>();
+        DontDestroyOnLoad(this.gameObject);
     }
     private void OnEnable() {
         input.Enable();
@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnMovementPerformed(InputAction.CallbackContext value) {
         moveVector = value.ReadValue<Vector2>();
+        lastMove = moveVector;
     }
     private void OnMovementCanceled(InputAction.CallbackContext value) {
         moveVector = Vector2.zero;

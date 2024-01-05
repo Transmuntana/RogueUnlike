@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61f445affd4c200439014d90d142225b, type: 3}
-  m_Name: SilverSpine
+  m_Name: Gravelerrock
   m_EditorClassIdentifier: 
   shoot: 1
-  cooldown: 2
-  blast: 0
-  fuse: 250
-  damage: 15
-  speed: 5
-  bulletSprite: {fileID: 1751551781, guid: cb687b0634db56f429c7236630e7f7e6, type: 3}
-  weapon: 1
+  cooldown: 15
+  blast: 7
+  fuse: 75
+  damage: 100
+  speed: 2
+  bulletSprite: {fileID: 1942909342, guid: cb687b0634db56f429c7236630e7f7e6, type: 3}
+  weapon: 2

@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         inventory = GameObject.Find("Inventory");
-        item = 1;
+        GameManager._instance.item = 1;
 
         for (int i = 1; i < 6; i++)
         {
@@ -24,20 +24,11 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && GameManager._instance.item == 3 && GameManager._instance.playerHP< GameManager._instance.playerMaxHP)
         {
-            switch (item) {
-                case 1:
-                    GameManager._instance.playerHP = 0;
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    GameManager._instance.inventory[item-1] -= 1;
-                    GameManager._instance.playerHP += 10;
-                    if (GameManager._instance.playerHP > GameManager._instance.playerMaxHP) GameManager._instance.playerHP = GameManager._instance.playerMaxHP;
-                    break;
-            }
+                GameManager._instance.inventory[item-1] -= 1;
+                GameManager._instance.playerHP += 10;
+                if (GameManager._instance.playerHP > GameManager._instance.playerMaxHP) GameManager._instance.playerHP = GameManager._instance.playerMaxHP;
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
@@ -49,23 +40,23 @@ public class InventoryManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
-            item = 1;
+            GameManager._instance.item = 1;
         }
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            item = 2;
+            GameManager._instance.item = 2;
         }
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
-            item = 3;
+            GameManager._instance.item = 3;
         }
         if (Input.GetKeyDown(KeyCode.Keypad4))
         {
-            item = 4;
+            GameManager._instance.item = 4;
         }
         if (Input.GetKeyDown(KeyCode.Keypad5))
         {
-            item = 5;
+            GameManager._instance.item = 5;
         }
     }
 }
