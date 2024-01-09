@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 2307496611896522134}
   - component: {fileID: 6168228314094488176}
   - component: {fileID: 2121043371613134155}
+  - component: {fileID: 4579862283111161137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -210,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastMove: {x: 1, y: 0}
+  animator: {fileID: 2121043371613134155}
 --- !u!50 &2307496611896522134
 Rigidbody2D:
   serializedVersion: 4
@@ -280,7 +282,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043312581300341032}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4325601893110e2408cf9b01c7f87e96, type: 2}
   m_CullingMode: 0
@@ -293,3 +295,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &4579862283111161137
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043312581300341032}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ba7bac058b7039847acc16ec207a283f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b273c2bb270afd442aa89c2aed476d1f, type: 2}
+  - {fileID: 7400000, guid: 5701814764c95e349b5dafee9154bc8a, type: 2}
+  - {fileID: 7400000, guid: 7370e68b69e07df43b1003ffa4c7eda0, type: 2}
+  - {fileID: 7400000, guid: ba7bac058b7039847acc16ec207a283f, type: 2}
+  - {fileID: 7400000, guid: 3e81dc915e64e2c4bbc84e2fda5d58e9, type: 2}
+  - {fileID: 7400000, guid: c9fde26ee38c0764cafa5f0c79e216ef, type: 2}
+  - {fileID: 7400000, guid: 44df1bba576e88f46975766b8ce28d54, type: 2}
+  - {fileID: 7400000, guid: 00cdad13c99ae884488e45f06fab82fa, type: 2}
+  - {fileID: 7400000, guid: 475c54fb25a5d4840bce7fc28dda1a10, type: 2}
+  - {fileID: 7400000, guid: b85148f5519564046911397f0e8dd249, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

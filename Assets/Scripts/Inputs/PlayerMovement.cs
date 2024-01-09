@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     private InputPlayer input = null;
     private Vector2 moveVector = Vector2.zero;
+    private Vector2 scale;
     public Vector2 lastMove = new Vector2(1,0);
+    public Animator animator;
     private Rigidbody2D rb = null;
     private float moveSpeed = 3f;
 
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         input = new InputPlayer();
         rb = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this.gameObject);
+        scale = transform.localScale;
     }
     private void OnEnable() {
         input.Enable();
@@ -31,6 +34,21 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() {
         rb.velocity = moveVector*moveSpeed;
         if (GameManager._instance.playerHP <= 0) Kill();
+        animator.SetFloat("Horizontal", lastMove.x);
+        animator.SetFloat("Vertical", lastMove.y);
+        //Debug.Log(lastMove.x+", "+lastMove.y);
+        if(moveVector.magnitude<0.3) animator.SetFloat("Speed", 0.0f);
+        else animator.SetFloat("Speed", 0.5f);
+
+
+        if (moveVector.x > 0)
+        {
+            transform.localScale = new Vector2(-scale.x, scale.y);
+        }
+        else if (moveVector.x < 0)
+        {
+            transform.localScale = new Vector2(scale.x, scale.y);
+        }
 
     }
     private void OnMovementPerformed(InputAction.CallbackContext value) {

@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
         {
             GameManager._instance.inventory[weaponData.weapon-1]--;
             counter = weaponData.cooldown;
-            GameObject temp = Instantiate(bullet, transform.position+new Vector3(pMove.lastMove.x, pMove.lastMove.y,0), Quaternion.identity) as GameObject;
+            GameObject temp = Instantiate(bullet, transform.position + new Vector3(pMove.lastMove.x, pMove.lastMove.y,0)/3, Quaternion.identity) as GameObject;
             Rigidbody2D bVector = temp.GetComponent<Rigidbody2D>();
             Bullet bulletScr = temp.GetComponent<Bullet>();
             SpriteRenderer bulletSpr = temp.GetComponent<SpriteRenderer>();
