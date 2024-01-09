@@ -23,13 +23,19 @@ public class Bullet : MonoBehaviour
     {
 
         if (trg.gameObject.tag == "Player") return;
-        if (trg.gameObject.tag == "Enemy")
+        else if (trg.gameObject.tag == "Enemy")
         {
 
             EnemyController enemyScr = trg.gameObject.GetComponent<EnemyController>();
             enemyScr.Kill();
         }
-        Kill();
+        else if (trg.gameObject.tag == "Turret")
+        {
+
+            TurretController enemyScr = trg.gameObject.GetComponent<TurretController>();
+            enemyScr.Kill();
+        }
+        else Kill();
     }
     private void Kill()
     {

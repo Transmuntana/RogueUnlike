@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
         if (trg.gameObject.tag == "Enemy") return;
         if (trg.gameObject.tag == "Player")
         {
-            GameManager._instance.playerHP -= 5;
+            GameManager._instance.playerHP -= 2;
         }
         Kill();
     }

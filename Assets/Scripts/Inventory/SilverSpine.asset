@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SilverSpine
   m_EditorClassIdentifier: 
   shoot: 1
-  cooldown: 2
+  cooldown: 20
   blast: 0
   fuse: 250
   damage: 15

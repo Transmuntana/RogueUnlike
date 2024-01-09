@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gravelerrock
   m_EditorClassIdentifier: 
   shoot: 1
-  cooldown: 15
+  cooldown: 270
   blast: 7
   fuse: 75
   damage: 100

@@ -43,7 +43,7 @@ public class TurretController : MonoBehaviour
         if (trg.gameObject.tag == "Player")
         {
             GameManager._instance.playerHP-=5;
-            Kill();
+            Destroy(this.gameObject);
         }
     }
     public void Kill()

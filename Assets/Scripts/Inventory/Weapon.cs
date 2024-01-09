@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] WeaponData weaponData;
     public PlayerMovement pMove;
     public GameObject bullet;
-    private int counter;
+    private int counter=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (counter > 0) counter--;
         if ((counter <= 0) && Input.GetKeyDown(KeyCode.Mouse0) && GameManager._instance.item==weaponData.weapon && GameManager._instance.inventory[weaponData.weapon-1]>0)
