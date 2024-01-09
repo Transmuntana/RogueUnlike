@@ -8,6 +8,7 @@ TagManager:
   - Inventory
   - UI
   - Enemy
+  - Turret
   layers:
   - Default
   - TransparentFX
