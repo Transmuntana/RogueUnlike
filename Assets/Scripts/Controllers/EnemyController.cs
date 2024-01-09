@@ -37,8 +37,8 @@ public class EnemyController : MonoBehaviour
         if (trg.gameObject.tag == "Player")
         {
             GameManager._instance.playerHP-=5;
+            Kill();
         }
-        Kill();
     }
     public void Kill()
     {

@@ -26,7 +26,7 @@ public class TurretController : MonoBehaviour
     {
         cooldown--;
         if (CheckPlayer(6) && cooldown<=0) {
-            cooldown = 5;
+            cooldown = 15;
             GameObject temp = Instantiate(bullet, transform.position + new Vector3(distance.x/distance.magnitude, distance.y / distance.magnitude, 0), Quaternion.identity) as GameObject;
             Rigidbody2D bVector = temp.GetComponent<Rigidbody2D>();
             bVector.velocity = new Vector2(distance.x / distance.magnitude * 3, distance.y / distance.magnitude * 3);
@@ -43,8 +43,8 @@ public class TurretController : MonoBehaviour
         if (trg.gameObject.tag == "Player")
         {
             GameManager._instance.playerHP-=5;
+            Kill();
         }
-        Kill();
     }
     public void Kill()
     {

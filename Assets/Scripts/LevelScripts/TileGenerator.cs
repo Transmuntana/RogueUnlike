@@ -242,15 +242,15 @@ public class TileGenerator : MonoBehaviour
                         towerTiles.SetTile(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z), tilesFloor[nTil]);
 
 
-                        int chestC = rand.Next(200);
-                        if (chestC == 0) {
+                        int chestC = rand.Next(300);
+                        if (chestC == 0 || chestC == 4 || chestC == 5 || chestC == 6) {
                             GameObject tempCh = Instantiate(chest, new Vector3(0.25f, 0.25f, -1f) + towerTiles.CellToWorld(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z)), Quaternion.identity) as GameObject;
                         }
-                        else if (chestC == 1)
+                        else if (chestC == 1 || chestC == 2)
                         {
                             GameObject tempEn = Instantiate(enemy, new Vector3(0.25f, 0.25f, -1f) + towerTiles.CellToWorld(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z)), Quaternion.identity) as GameObject;
                         }
-                        else if (chestC == 2)
+                        else if (chestC == 3)
                         {
                             GameObject tempEn = Instantiate(enemy2, new Vector3(0.25f, 0.25f, -1f) + towerTiles.CellToWorld(new Vector3Int(currentCell.x + x, currentCell.y + y, currentCell.z)), Quaternion.identity) as GameObject;
                         }
